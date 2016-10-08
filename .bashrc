@@ -134,3 +134,5 @@ alias negative='convert -negate'
 alias butterfly='/home/kasra/.local/bin/butterfly.server.py --unsecure'
 #alias markdownviewer="pandoc $1 | lynx"
 alias routerip='traceroute 8.8.8.8'
+alias radiojavan="mpv http://stream.radiojavan.com/radiojavan"
+alias kralpop="mpv http://kralpopsc.radyotvonline.com/"

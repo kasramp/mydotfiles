@@ -11,4 +11,5 @@ set expandtab
 " related to eclim plugin
 set nocompatible
 filetype plugin indent on
-
+set mouse=a
+set ttymouse=xterm

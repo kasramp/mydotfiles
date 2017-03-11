@@ -155,6 +155,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# xcompmgr - to solve Firefox slowness on kernel 4.4.x.
+# Drawback -  disables floating window [$mod + Shift + Space]
+exec xcompmgr
 exec --no-startup-id dropbox start
 exec volumeicon
 exec nm-applet

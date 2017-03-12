@@ -138,3 +138,6 @@ alias radiojavan="mpv http://stream.radiojavan.com/radiojavan"
 alias kralpop="mpv http://kralpopsc.radyotvonline.com/"
 alias twitter='rainbowstream'
 alias nvlc='nvlc --no-fb-tty'
+alias tmux-attach='tmux attach -t'
+alias foxit='exec ~/opt/foxitsoftware/foxitreader/FoxitReader'
+alias win-foxit='env WINEPREFIX="/home/kixz/.wine" wine C:\\Program\ Files\ \(x86\)\\Foxit\ Software\\Foxit\ Reader\\Foxit\ Reader.exe'

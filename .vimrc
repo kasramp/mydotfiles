@@ -1,5 +1,6 @@
 set number
 autocmd BufRead,BufNewFile *.txt setlocal spell
+autocmd BufRead,BufNewFile *.tex setlocal spell
 set complete+=kspell
 filetype plugin indent on
 " show existing tab with 4 spaces width

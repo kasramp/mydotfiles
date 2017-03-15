@@ -169,6 +169,7 @@ exec --no-startup-id /home/kasra/.i3/wt.sh
 exec /home/kasra/.i3/wt.sh
 #exec --no-startup-id xinput list-props "SynPS/2 Synaptics TouchPad"
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
+exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 bindsym Control+Mod1+l exec gnome-screensaver-command -l
 #bindsym Control+Mod1+l exec gnome-screensaver-command -l
 bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle 

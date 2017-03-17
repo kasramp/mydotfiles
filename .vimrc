@@ -14,3 +14,5 @@ set nocompatible
 filetype plugin indent on
 set mouse=a
 set ttymouse=xterm
+"added spell checking, shortcut <F6>
+map <F6> :setlocal spell spelllang=en_us<CR>

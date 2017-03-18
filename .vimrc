@@ -16,3 +16,13 @@ set mouse=a
 set ttymouse=xterm
 "added spell checking, shortcut <F6>
 map <F6> :setlocal spell spelllang=en_us<CR>
+"system-wide copy/paster (Ctrl+c)/(Ctrl+v) - prior to that install sudo apt install vim-gtk
+nnoremap <C-c> "+y 
+vnoremap <C-c> "+y 
+nnoremap <C-v> "+p 
+vnoremap <C-v> "+p
+"insert a line without going to insert mode, Enter --> next line, Shift + enter
+"--> previous line
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+

@@ -25,4 +25,4 @@ vnoremap <C-v> "+p
 "--> previous line
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
-
+nmap [<Space> O<Esc>

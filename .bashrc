@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias lang='exec /home/kasra/.i3/lang.sh'
+alias lang='exec /home/kixz/.config/i3/lang.sh'
 alias youtube='mpsyt'
 alias move='rsync -avh --progress --remove-source-files'
 alias copy='rsync -avh --progress'

@@ -163,10 +163,11 @@ exec --no-startup-id dropbox start
 exec volumeicon
 exec nm-applet
 exec indicator-weather
-exec --no-startup-id /home/kasra/.i3/lang.sh
-exec /home/kasra/.i3/lang.sh
-exec --no-startup-id /home/kasra/.i3/wt.sh
-exec /home/kasra/.i3/wt.sh
+exec --no-startup-id /home/kixz/.config/i3/lang.sh
+exec /home/kixz/.config/i3/lang.sh
+exec --no-startup-id /home/kixz/.config/i3/wt.sh
+exec /home/kixz/.config/i3/wt.sh
+exec --no-startup-id /home/kixz/.config/i3/gdrive.sh
 #exec --no-startup-id xinput list-props "SynPS/2 Synaptics TouchPad"
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*

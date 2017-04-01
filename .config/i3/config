@@ -180,4 +180,5 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 # i3lock with custom random picture from the path, accepts any format
 bindsym Control+Mod1+l exec /home/kixz/.config/i3/lock.sh
-
+bindsym Pause exec playerctl pause
+bindsym Insert exec playerctl play

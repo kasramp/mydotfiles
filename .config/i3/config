@@ -171,10 +171,13 @@ exec --no-startup-id /home/kixz/.config/i3/gdrive.sh
 #exec --no-startup-id xinput list-props "SynPS/2 Synaptics TouchPad"
 exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelta=-111
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
+# Gnome lock
 bindsym Control+Mod1+l exec gnome-screensaver-command -l
-#bindsym Control+Mod1+l exec gnome-screensaver-command -l
 bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle 
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5%
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+# i3lock with custom random picture from the path, accepts any format
+bindsym Control+Mod1+l exec /home/kixz/.config/i3/lock.sh
+

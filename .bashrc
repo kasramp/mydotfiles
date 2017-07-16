@@ -115,7 +115,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-alias lang='exec /home/kixz/.config/i3/lang.sh'
+alias lang='exec /home/kasra/.config/i3/lang.sh'
 alias youtube='mpsyt'
 alias move='rsync -avh --progress --remove-source-files'
 alias copy='rsync -avh --progress'
@@ -140,7 +140,7 @@ alias twitter='rainbowstream'
 alias nvlc='nvlc --no-fb-tty'
 alias tmux-attach='tmux attach -t'
 alias foxit='exec ~/opt/foxitsoftware/foxitreader/FoxitReader'
-alias win-foxit='env WINEPREFIX="/home/kixz/.wine" wine C:\\Program\ Files\ \(x86\)\\Foxit\ Software\\Foxit\ Reader\\Foxit\ Reader.exe'
+alias win-foxit='env WINEPREFIX="/home/kasra/.wine" wine C:\\Program\ Files\ \(x86\)\\Foxit\ Software\\Foxit\ Reader\\Foxit\ Reader.exe'
 alias playplay='playerctl play'
 alias playpause='playerctl pause'
 alias playnext='playerctl next; sleep .5; playerctl metadata; echo -e "\n"'
@@ -148,4 +148,9 @@ alias playback='playerctl previous'
 alias vup='pactl set-sink-volume 1 +5%'
 alias vdown='pactl set-sink-volume 1 -5%'
 alias m='pactl set-sink-mute 1 toggle' 
-
+alias shutup='python /home/kasra/.config/i3/shutupSpotifyAd.py >> /dev/null &'
+alias calc='bc'
+alias windows='cd /media/kasra/Windows8_OS/Users/Kasra'
+alias mountwin='udisksctl mount --block-device /dev/sda5'
+alias xclip='xclip -selection clipboard'
+alias python='python3'

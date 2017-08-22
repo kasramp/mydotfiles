@@ -54,7 +54,8 @@ nmap [<Space> O<Esc>
 nmap <CR> o<Esc>
 
 " NerdTREE
-autocmd vimenter * NERDTree
+autocmd Vimenter * NERDTree
+autocmd VimEnter * wincmd p
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 

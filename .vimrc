@@ -20,6 +20,7 @@ Plugin 'sbdchd/neoformat'
 Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

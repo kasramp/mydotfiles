@@ -21,7 +21,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Search
 Plugin 'Shougo/unite.vim'
-" Code format <F3>
+" Code format <F3>.
+" First install formatters sudo apt install astyle, pandoc, tidy.
+" sudo pip install jsbeautifier
 Plugin 'sbdchd/neoformat'
 " Java autocomplete (Not working yet)
 Plugin 'artur-shaik/vim-javacomplete2'

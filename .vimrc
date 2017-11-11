@@ -12,15 +12,26 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 
+" Vundle plugin
 Plugin 'VundleVim/Vundle.vim'
+" Nerdtree for file viewer
 Plugin 'scrooloose/nerdtree'
+" Extra stuff on status bar with theme
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" Search
 Plugin 'Shougo/unite.vim'
+" Code format <F3>
 Plugin 'sbdchd/neoformat'
+" Java autocomplete (Not working yet)
 Plugin 'artur-shaik/vim-javacomplete2'
+" Tab for Nerdtree
 Plugin 'ervandew/supertab'
-Plugin 'Valloric/YouCompleteMe'
+" Python autocomplete :help jedi-vim
 Plugin 'davidhalter/jedi-vim'
+" Checks for synatx error in code, any lang supported
+Plugin 'scrooloose/syntastic' 
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -29,8 +40,8 @@ filetype plugin indent on    " required
 set number
 autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd BufRead,BufNewFile *.tex setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal spell
 set complete+=kspell
-filetype plugin indent on
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -39,7 +50,6 @@ set shiftwidth=4
 set expandtab
 " related to eclim plugin
 set nocompatible
-filetype plugin indent on
 set mouse=a
 set ttymouse=xterm
 map <F6> :setlocal spell spelllang=en_us<CR>

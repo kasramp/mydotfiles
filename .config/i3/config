@@ -182,3 +182,25 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym Control+Mod1+l exec /home/kixz/.config/i3/lock.sh
 bindsym Pause exec playerctl pause
 bindsym Insert exec playerctl play
+
+# Scratchpad
+exec --no-startup-id /home/kixz/.config/i3/widget_files.sh
+exec --no-startup-id terminator -c "vim" -e 'vim /tmp/vim.md'
+for_window [instance="vim"] floating enable;
+for_window [instance="vim"] move scratchpad; [instance="vim"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+F1 [instance="vim"] scratchpad show, resize set 1200 650 
+
+exec --no-startup-id terminator -c "nerdtree" -e 'vim /tmp/nerdtree.md'
+for_window [instance="nerdtree"] floating enable;
+for_window [instance="nerdtree"] move scratchpad; [instance="nerdtree"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+F2 [instance="nerdtree"] scratchpad show, resize set 1200 650 
+
+exec --no-startup-id terminator -c "tmux" -e 'vim /tmp/tmux.md'
+for_window [instance="tmux"] floating enable;
+for_window [instance="tmux"] move scratchpad; [instance="tmux"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+F3 [instance="tmux"] scratchpad show, resize set 1200 650 
+
+exec --no-startup-id terminator -c term-floating
+for_window [instance="term-floating"] floating enable;
+for_window [instance="term-floating"] move scratchpad; [instance="term-floating"] scratchpad show; move position 80px 50px; move scratchpad
+bindsym $mod+F4 [instance="term-floating"] scratchpad show, resize set 1200 650 

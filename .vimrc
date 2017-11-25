@@ -33,6 +33,9 @@ Plugin 'ervandew/supertab'
 Plugin 'davidhalter/jedi-vim'
 " Checks for synatx error in code, any lang supported
 Plugin 'scrooloose/syntastic' 
+" Makrdown syntax highlighter
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 " Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
@@ -65,7 +68,8 @@ vnoremap <C-v> "+p
 nmap <C-Enter> O<Esc>
 nmap [<Space> O<Esc>
 nmap <CR> o<Esc>
-
+" disable folding in .md files caused by Markdown plugin
+let g:vim_markdown_folding_disabled = 1
 " NerdTREE
 autocmd Vimenter * NERDTree
 autocmd VimEnter * wincmd p

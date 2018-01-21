@@ -115,6 +115,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Activating VI mode in bash
+set -o vi
+
 alias lang='exec /home/kasra/.config/i3/lang.sh'
 alias youtube='mpsyt'
 alias move='rsync -avh --progress --remove-source-files'
@@ -156,3 +160,4 @@ alias mountwin='udisksctl mount --block-device /dev/sda5'
 alias xclip='xclip -selection clipboard'
 alias python='python3'
 alias wireless='nmtui'
+alias torrent='transmission-cli -w ~/Downloads/'

@@ -156,3 +156,9 @@ alias mountwin='udisksctl mount --block-device /dev/sda5'
 alias xclip='xclip -selection clipboard'
 alias python='python3'
 alias wireless='nmtui'
+to_mp3()
+{
+    input_file="${1}"
+    output_file=`basename "${1%.*}".mp3`
+    ffmpeg -i "${input_file}" -b:a 320k "${output_file}"
+}

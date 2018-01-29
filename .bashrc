@@ -161,3 +161,13 @@ alias xclip='xclip -selection clipboard'
 alias python='python3'
 alias wireless='nmtui'
 alias torrent='transmission-cli -w ~/Downloads/'
+alias copy='xsel --display :0'
+alias paste='xsel -o --display :0'
+alias mpv-fb='mpv --vo=drm'
+
+to_mp3()
+{
+    input_file="${1}"
+    output_file=`basename "${1%.*}".mp3`
+    ffmpeg -i "${input_file}" -b:a 320k "${output_file}"
+}

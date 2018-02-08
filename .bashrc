@@ -171,3 +171,11 @@ to_mp3()
     output_file=`basename "${1%.*}".mp3`
     ffmpeg -i "${input_file}" -b:a 320k "${output_file}"
 }
+
+audio_record()
+{
+    audio_file_name=`date '+%Y-%m-%d_%H:%M:%S'.mp3`
+    path='/home/kixz/Audio/'
+    mkdir -p "${path}"
+    ffmpeg -f alsa -ac 2 -i hw:1,0 -acodec libmp3lame -ab 320k "${path}${audio_file_name}"
+}

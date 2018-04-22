@@ -58,11 +58,16 @@ set nocompatible
 set mouse=a
 set ttymouse=xterm
 map <F6> :setlocal spell spelllang=en_us<CR>
-"system-wide copy/paster (Ctrl+c)/(Ctrl+v) - prior to that install sudo apt install vim-gtk
-nnoremap <C-c> "+y 
-vnoremap <C-c> "+y 
-nnoremap <C-v> "+p 
-vnoremap <C-v> "+p
+"system-wide copy/paster (F9)/(F10) - prior to that install sudo apt install vim-gtk
+"Ctrl + c and Ctrl + v is removed because they tamper comment and uncomment of
+"the code. 
+"To comment Ctrl + V first chars of lines and then Shift + I
+"To uncomment Ctrl + V then press x
+nnoremap <F9> "+y 
+vnoremap <F9> "+y 
+nnoremap <F10> "+p 
+vnoremap <F10> "+p
+
 "insert a line without going to insert mode, Enter --> next line, Shift + enter
 "--> previous line
 nmap <C-Enter> O<Esc>

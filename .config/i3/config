@@ -156,6 +156,19 @@ bar {
         status_command i3status
 }
 
+# Keyboard shortcuts to open apps
+bindsym $mod+b exec firefox
+bindsym $mod+y exec spotify
+bindsym $mod+o exec opera
+bindsym $mod+i exec idea
+bindsym $mod+m exec terminator -e 'mpv --no-video ~/Music/'
+bindsym $mod+Shift+v exec terminator -e 'vim'
+bindsym $mod+Shift+b exec terminator -e 'bluetoothctl'
+bindsym $mod+x exec terminator -e 'ranger'
+bindsym $mod+q exec qutebrowser
+bindsym $mod+t exec terminator -e 'mpsyt'
+bindsym $mod+c exec calibre
+
 # xcompmgr - to solve Firefox slowness on kernel 4.4.x.
 # Drawback -  disables floating window [$mod + Shift + Space]
 exec xcompmgr

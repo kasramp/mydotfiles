@@ -65,8 +65,9 @@ map <F6> :setlocal spell spelllang=en_us<CR>
 "To uncomment Ctrl + V then press x
 nnoremap <F9> "+y 
 vnoremap <F9> "+y 
-nnoremap <F10> "+p 
-vnoremap <F10> "+p
+" Capital P to paste before cursor
+nnoremap <F10> "+P 
+vnoremap <F10> "+P
 
 "insert a line without going to insert mode, Enter --> next line, Shift + enter
 "--> previous line

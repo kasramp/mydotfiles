@@ -179,3 +179,7 @@ audio_record()
     mkdir -p "${path}"
     ffmpeg -f alsa -ac 2 -i hw:1,0 -acodec libmp3lame -ab 320k "${path}${audio_file_name}"
 }
+
+# To make tmux does not mess vim status bar
+TERM=xterm-256color
+

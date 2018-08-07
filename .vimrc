@@ -84,11 +84,13 @@ nmap <CR> o<Esc>
 let g:vim_markdown_folding_disabled = 1
 
 " enable powerline font, to show arrow in status bar properly
-" need to install poweline-font sudo apt-get install font-powerline
+" need to install poweline-font sudo apt-get install fonts-powerline
 let g:airline_powerline_fonts = 1
 
 " NerdTREE
-autocmd Vimenter * NERDTree
+" Disable NerdTree on start up to speed up the load time and save one key
+" stroke :-P
+"autocmd Vimenter * NERDTree
 autocmd VimEnter * wincmd p
 map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

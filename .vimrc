@@ -82,6 +82,11 @@ nmap [<Space> O<Esc>
 nmap <CR> o<Esc>
 " disable folding in .md files caused by Markdown plugin
 let g:vim_markdown_folding_disabled = 1
+
+" enable powerline font, to show arrow in status bar properly
+" need to install poweline-font sudo apt-get install font-powerline
+let g:airline_powerline_fonts = 1
+
 " NerdTREE
 autocmd Vimenter * NERDTree
 autocmd VimEnter * wincmd p

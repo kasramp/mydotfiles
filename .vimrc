@@ -12,6 +12,9 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 
+" Fix status bar in Terminator and Tmux
+set t_Co=256
+
 " Vundle plugin
 Plugin 'VundleVim/Vundle.vim'
 " Nerdtree for file viewer

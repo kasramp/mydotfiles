@@ -41,6 +41,9 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 " Plugin 'Valloric/YouCompleteMe'
 
+" For git branch on status bar
+Plugin 'tpope/vim-fugitive'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 " End of Vundle

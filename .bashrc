@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 # Activating VI mode in bash
-set -o vi
+# set -o vi
 
 alias lang='exec /home/kasra/.config/i3/lang.sh'
 alias youtube='mpsyt'

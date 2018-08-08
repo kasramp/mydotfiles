@@ -10,4 +10,6 @@ sr google hello world
 - toot: Manstodon client
 - feh: picture viewer
 - newsboat: RSS reader
--
+- mpv: media player
+- qutebrowser: browser with vim key bindings
+- nvlc: media player

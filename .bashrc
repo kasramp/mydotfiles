@@ -182,4 +182,4 @@ audio_record()
 
 # To make tmux does not mess vim status bar
 TERM=screen-256color
-
+EDITOR=vim

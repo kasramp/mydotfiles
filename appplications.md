@@ -13,3 +13,4 @@ sr google hello world
 - mpv: media player
 - qutebrowser: browser with vim key bindings
 - nvlc: media player
+- tiv: terminal image viewer [here](https://github.com/stefanhaustein/TerminalImageViewer)

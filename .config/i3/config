@@ -168,6 +168,7 @@ bindsym $mod+x exec terminator -e 'ranger'
 bindsym $mod+q exec qutebrowser
 bindsym $mod+t exec terminator -e 'mpsyt'
 bindsym $mod+c exec calibre
+bindsym $mod+p exec pcmanfm
 
 # xcompmgr - to solve Firefox slowness on kernel 4.4.x.
 # Drawback -  disables floating window [$mod + Shift + Space]
@@ -229,3 +230,23 @@ exec --no-startup-id terminator -c term-floating
 for_window [instance="term-floating"] floating enable;
 for_window [instance="term-floating"] move scratchpad; [instance="term-floating"] scratchpad show; move position 80px 50px; move scratchpad
 bindsym $mod+F4 [instance="term-floating"] scratchpad show, resize set 1200 650 
+
+
+
+# Scratchpad for Urxvt
+#exec --no-startup-id /home/kixz/.i3/widget_files.sh
+#exec --no-startup-id urxvt -name "vim" -e sh -c 'vim /tmp/vim.md'  
+#for_window [instance="vim"] floating enable;
+#for_window [instance="vim"] move scratchpad; [instance="vim"] scratchpad show; move position 80px 50px; move scratchpad
+#bindsym $mod+F1 [instance="vim"] scratchpad show, resize set 1200 650 
+#
+#exec --no-startup-id urxvt -name "nerdtree" -e sh -c 'vim /tmp/nerdtree.md'
+#for_window [instance="nerdtree"] floating enable;
+#for_window [instance="nerdtree"] move scratchpad; [instance="nerdtree"] scratchpad show; move position 80px 50px; move scratchpad
+#bindsym $mod+F2 [instance="nerdtree"] scratchpad show, resize set 1200 650 
+#
+#exec --no-startup-id urxvt -name "tmux" -e sh -c 'vim /tmp/tmux.md'
+#for_window [instance="tmux"] floating enable;
+#for_window [instance="tmux"] move scratchpad; [instance="tmux"] scratchpad show; move position 80px 50px; move scratchpad
+#bindsym $mod+F3 [instance="tmux"] scratchpad show, resize set 1200 650 
+

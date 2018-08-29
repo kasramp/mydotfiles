@@ -48,6 +48,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " End of Vundle
 
+syntax on
 set number
 autocmd BufRead,BufNewFile *.txt setlocal spell
 autocmd BufRead,BufNewFile *.tex setlocal spell

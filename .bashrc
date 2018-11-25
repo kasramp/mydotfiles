@@ -166,6 +166,13 @@ alias yank='xsel --display :0'
 alias paste='xsel -o --display :0'
 alias mpv-fb='mpv --vo=drm'
 
+# BEGIN Manjaro specific
+alias apt-update='sudo pacman -Syy'
+alias apt-upgrade='sudo pacman -Syu'
+alias apt-install='sudo pacman -Sy'
+alias apt-search='sudo pacman -Ss'
+# END Manjaro specific
+
 to_mp3()
 {
     input_file="${1}"

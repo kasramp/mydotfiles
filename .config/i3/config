@@ -165,6 +165,7 @@ bindsym $mod+m exec terminator -e 'mpv --no-video ~/Music/'
 bindsym $mod+Shift+v exec terminator -e 'vim'
 bindsym $mod+Shift+b exec terminator -e 'bluetoothctl'
 bindsym $mod+x exec terminator -e 'ranger'
+bindsym $mod+Shift+x exec terminator -e 'tmux'
 bindsym $mod+q exec qutebrowser
 bindsym $mod+t exec terminator -e 'mpsyt'
 bindsym $mod+c exec calibre

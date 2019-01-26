@@ -6,5 +6,8 @@ color info red black bold
 color article cyan default
 
 # use `, + w/m` to launch in "w3m" or "mpv"
+macro o set browser "firefox"; open-in-browser
 macro w set browser "w3m"; open-in-browser
 macro m set browser "mpv"; open-in-browser
+macro r set browser "firefox"
+

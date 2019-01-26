@@ -166,7 +166,7 @@ alias torrent='transmission-cli -w ~/Downloads/'
 alias yank='xsel --display :0'
 alias paste='xsel -o --display :0'
 alias mpv-fb='mpv --vo=drm'
-
+alias rss='newsboat'
 # BEGIN Manjaro specific
 alias apt-update='sudo pacman -Syy'
 alias apt-upgrade='sudo pacman -Syu'

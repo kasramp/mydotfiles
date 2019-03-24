@@ -46,6 +46,7 @@ Plugin 'tpope/vim-fugitive'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
+set omnifunc=syntaxcomplete#Complete  " turn on autocompletion for CSS files Ctrl + x + Ctrl + o
 " End of Vundle
 
 syntax on

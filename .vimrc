@@ -101,6 +101,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Neoformat
 map <F3> :Neoformat<CR>
 
+" JSON reindentation
+map <C-i> :%!python -m json.tool<CR>
+
 " Javacomplete2
 " autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)

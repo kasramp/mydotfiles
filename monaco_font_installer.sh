@@ -8,12 +8,12 @@
 `mkdir -p ~/.fonts/`
 `cp font/Monaco-Linux.ttf ~/.fonts`
 `fc-cache -fv`
-`echo '! Change the font to Monaco' >> ~/.Xresource`
+`echo '! Change the font to Monaco' >> ~/.Xresources`
 `echo 'URxvt*font: xft:monaco:size=11' >> ~/.Xresources`
 `xrdb ~/.Xresources`
 
 echo -e "\n"
-ehco -e "\n"
+echo -e "\n"
 echo -e "Monaco font installation has finished\n"
 echo -e "Close your terminal and open again to see the effect\n"
 echo "Enjoy using Monaco font!!!"

@@ -168,7 +168,9 @@ alias paste='xsel -o --display :0'
 alias mpv-fb='mpv --vo=drm'
 alias rss='newsboat'
 alias startup='sudo vim /etc/rc.local'
-# BEGIN Manjaro specific
+alias vimrc="vim $HOME/.vimrc"
+alias bashrc="vim $HOME/.bashrc"
+## BEGIN Manjaro specific
 alias apt-update='sudo pacman -Syy'
 alias apt-upgrade='sudo pacman -Syu'
 alias apt-install='sudo pacman -Sy'

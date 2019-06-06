@@ -44,6 +44,9 @@ Plugin 'plasticboy/vim-markdown'
 " For git branch on status bar
 Plugin 'tpope/vim-fugitive'
 
+" Auto close ([{
+Plugin 'Townk/vim-autoclose'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 set omnifunc=syntaxcomplete#Complete  " autocompletion for CSS files `Ctrl + x + Ctrl + o`

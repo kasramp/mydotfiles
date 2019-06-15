@@ -15,3 +15,4 @@ sr google hello world
 - nvlc: media player
 - tiv: terminal image viewer [here](https://github.com/stefanhaustein/TerminalImageViewer)
 - sxiv: an image viewer better than feh. How to use [here](https://www.youtube.com/watch?v=GYW9i_u5PYs)
+- ffplay: media player capable of playing in frame buffer without any configuration

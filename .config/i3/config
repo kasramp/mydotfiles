@@ -188,6 +188,7 @@ exec --no-startup-id synclient HorizEdgeScroll=1 VertEdgeScroll=1 VertScrollDelt
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
 exec /home/kixz/.config/i3/shutupSpotifyAd.sh
 exec --no-startup-id /home/kixz/.config/i3/toolbox.sh
+exec --no-startup-id /home/kixz/.config/i3/xrandr.sh
 
 # Gnome lock
 # bindsym Control+Mod1+l exec gnome-screensaver-command -l

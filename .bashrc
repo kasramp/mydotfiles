@@ -176,7 +176,7 @@ alias apt-upgrade='sudo pacman -Syu'
 alias apt-install='sudo pacman -Sy'
 alias apt-search='sudo pacman -Ss'
 # END Manjaro specific
-
+alias standby="systemctl suspend"
 to_mp3()
 {
     input_file="${1}"

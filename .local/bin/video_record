@@ -1,0 +1,22 @@
+#!/bin/bash
+
+file_name=`date '+%Y-%m-%d_%H:%M:%S'.mkv`
+
+# Show webcam
+ffplay -x 340 -y 256  -vf hflip -framerate 30 -window_title "$file_name" \
+    /dev/video0 &
+
+sleep 1
+
+# Move the webcam window to bottom right
+xdotool search --name "$file_name" windowsize 340 256 \
+windowmove 100% 100%
+
+wmctrl -c "$file_name" -b add,above
+sleep 2
+
+path='/home/kixz/Videos/'
+mkdir -p "${path}"
+
+ffmpeg -y -f x11grab -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` \
+-i :0.0 -f alsa -i default -c:v libx264 -r 48 -c:a flac "${path}${file_name}"

@@ -1,0 +1,33 @@
+#!/bin/bash
+
+file_name=`date '+%Y-%m-%d_%H:%M:%S'.mkv`
+
+# Show webcam
+ffplay -x 340 -y 256  -vf hflip -framerate 30 -window_title "$file_name" \
+    /dev/video0 &
+
+sleep 1
+
+# Move the webcam window to bottom right
+xdotool search --name "$file_name" windowsize 340 256 \
+windowmove 100% 100%
+
+wmctrl -c "$file_name" -b add,above
+sleep 2
+
+path='/home/kixz/Videos/'
+mkdir -p "${path}"
+
+
+#ffmpeg -thread_queue_size 2048 -y -f x11grab -s 1920x1080  \
+#-i :0.0+1600,0 -f alsa -thread_queue_size 2048 -i default -c:v libx264 -r 48 -c:a flac "${path}${file_name}"
+
+# use vaapi
+# requires `intel-vaapi-driver`, `libva-intel-driver` and `libva-utils` to be installed
+# see: https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Intel
+# https://askubuntu.com/questions/247911/how-to-correctly-enable-test-va-api-on-intel-sandy-bridge
+# https://trac.ffmpeg.org/wiki/Hardware/QuickSync
+
+ffmpeg -f alsa -i default -c:a flac \
+    -vaapi_device /dev/dri/renderD128 -y -f x11grab -s 1920x1080  -i :0.0+1600,0 \
+    -vf 'format=nv12,hwupload' -c:v h264_vaapi -r 60 "${path}${file_name}"

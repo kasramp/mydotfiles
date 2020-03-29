@@ -27,6 +27,7 @@ mkdir -p "${path}"
 # see: https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Intel
 # https://askubuntu.com/questions/247911/how-to-correctly-enable-test-va-api-on-intel-sandy-bridge
 # https://trac.ffmpeg.org/wiki/Hardware/QuickSync
+# use `vainfo` to ensure everything is installed correctly
 
 ffmpeg -f alsa -i default -c:a flac \
     -vaapi_device /dev/dri/renderD128 -y -f x11grab -s 1920x1080  -i :0.0+1600,0 \

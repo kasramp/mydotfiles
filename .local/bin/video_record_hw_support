@@ -29,6 +29,6 @@ mkdir -p "${path}"
 # https://trac.ffmpeg.org/wiki/Hardware/QuickSync
 # use `vainfo` to ensure everything is installed correctly
 
-ffmpeg -f alsa -i default -c:a flac \
+ffmpeg -f pulse -i default -c:a flac \
     -vaapi_device /dev/dri/renderD128 -y -f x11grab -s 1920x1080  -i :0.0+1600,0 \
     -vf 'format=nv12,hwupload' -c:v h264_vaapi -r 60 "${path}${file_name}"

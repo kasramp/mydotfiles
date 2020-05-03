@@ -1,0 +1,41 @@
+#!/bin/bash
+
+##
+## A simple wrapper on top 'chisel' SOCKS5 proxy, see: https://github.com/jpillora/chisel
+##
+## Setup:
+## 1. Deploy a Heroku proxy instance, see: https://github.com/mrluanma/chisel-heroku
+## 2. Export either 'PROXY_SERVER' and 'PROXY_AUTH' in your .bashrc or run 'proxy server user:pass'
+## 3. Download a SOCKS5 extension. For Chrome/Chromium use SOCKS5 Proxy
+##    https://chrome.google.com/webstore/detail/socks-proxy/odiakldnmmpjabkemfboijigageaelcn?hl=en
+##    Then configure the extension to connect to 'localhost:1080' and activate it
+##
+## Happy surfing!
+##
+
+if [ $# -eq 0 ] && [[ -z "${PROXY_SERVER}" ]] && [[ -z "${PROXY_AUTH}" ]]; then
+    echo "Usage: proxy https://example.com user:pass"
+    exit 1
+fi
+
+if [[ -z "${PROXY_SERVER}" ]]; then
+    if [[ -z "${1}" ]]; then
+        echo "Please pass the proxy server address or set 'PROXY_SERVER' env var"
+        exit 1
+    else
+        PROXY_SERVER=$1
+    fi
+fi
+
+if [[ -z "${PROXY_AUTH}" ]]; then
+    if [[ -z "${2}" ]]; then
+        echo "Please pass the proxy authentication like 'user:pass' or set 'PROXY_AUTH' env var"
+        exit 1
+    else 
+        PROXY_AUTH=$2
+    fi
+fi
+
+echo "Attempting to ${PROXY_SERVER} server with ***** user and pass"
+
+chisel client --keepalive 10s --auth ${PROXY_AUTH} ${PROXY_SERVER} socks

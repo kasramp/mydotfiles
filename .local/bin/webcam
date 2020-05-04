@@ -1,0 +1,15 @@
+#!/bin/bash
+
+webcam_title="@kasra_mp"
+
+# Show webcam
+ffplay -x 400 -y 225  -vf hflip -framerate 30 -window_title $webcam_title \
+    /dev/video0 &
+
+sleep 1
+
+# Move the webcam window to bottom right
+xdotool search --name $webcam_title windowsize 400 225 \
+windowmove 100% 100%
+
+wmctrl -c $webcam_title -b add,above

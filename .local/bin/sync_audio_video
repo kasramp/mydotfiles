@@ -1,0 +1,4 @@
+#!/bin/bash
+
+ffmpeg -i "${1}" -itsoffset 00:00:00.300 -i "${2}" -c:v copy -c:a flac \
+-map 0:a:0 -map 1:v:0 out.mkv

@@ -16,6 +16,8 @@ mkdir -p "${path}"
 # https://trac.ffmpeg.org/wiki/Hardware/QuickSync
 # use `vainfo` to ensure everything is installed correctly
 # 1366 for X250, 1600 for T430
+# use alsa if audio/video got out of sync without the external card for T430
+# X250 works without a problem but device needs to be connected when starting the computer
 
 ffmpeg -f alsa -i default -c:a flac \
     -vaapi_device /dev/dri/renderD128 -y -f x11grab -s 1920x1080  -i :0.0+1366,0 \

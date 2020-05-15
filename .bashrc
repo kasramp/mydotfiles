@@ -175,6 +175,7 @@ alias apt-update='sudo pacman -Syy'
 alias apt-upgrade='sudo pacman -Syu'
 alias apt-install='sudo pacman -Sy'
 alias apt-search='sudo pacman -Ss'
+alias apt-remove='sudo pacman -Rs'
 # END Manjaro specific
 alias standby="systemctl suspend"
 alias merge_audio_video="ffmpeg -i $0 -i $1 -c:v copy -c:a flac -map 0:v:0 -map 1:a:0 out.mkv"
